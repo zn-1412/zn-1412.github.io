@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 760" preserveAspectRatio="xMidYMid slice" role="img" aria-label="山谷、落日与远行的山径">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b7c7b4"/>
+      <stop offset="0.48" stop-color="#d8d5bb"/>
+      <stop offset="1" stop-color="#e7d7bb"/>
+    </linearGradient>
+    <radialGradient id="sun-halo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f4ce93" stop-opacity="0.9"/>
+      <stop offset="0.55" stop-color="#ecc085" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#e7b776" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="haze" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dfd8c4" stop-opacity="0"/>
+      <stop offset="1" stop-color="#d4d2bd" stop-opacity="0.75"/>
+    </linearGradient>
+    <linearGradient id="foreground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2d4637"/>
+      <stop offset="1" stop-color="#14251b"/>
+    </linearGradient>
+    <radialGradient id="vignette" cx="0.5" cy="0.44" r="0.75">
+      <stop offset="0.58" stop-color="#0f1b14" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0f1b14" stop-opacity="0.32"/>
+    </radialGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="9" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.1"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="760" fill="url(#sky)"/>
+  <circle cx="690" cy="248" r="185" fill="url(#sun-halo)"/>
+  <circle cx="690" cy="248" r="92" fill="#f1c27f"/>
+
+  <path d="M0 430C104 385 166 366 245 384c65 15 111 46 168 37 89-14 127-90 222-87 102 4 177 62 365 73v353H0Z"
+        fill="#a3af94" opacity="0.72"/>
+  <path d="M0 486c98-33 163-56 236-38 75 18 107 62 184 77 88 17 154-31 226-52 107-31 207-9 354 31v256H0Z"
+        fill="#728571" opacity="0.8"/>
+  <rect y="430" width="1000" height="200" fill="url(#haze)"/>
+
+  <path d="M0 538c91-31 159-42 239-11 79 31 142 75 232 69 95-6 169-60 262-76 99-17 193 7 267 28v212H0Z"
+        fill="#506a56"/>
+  <path d="M0 611c75-31 146-41 213-24 84 21 132 63 214 78 93 17 171-28 259-47 106-23 204-3 314 28v114H0Z"
+        fill="url(#foreground)"/>
+
+  <path d="M563 760c-25-64-41-105-24-151 16-43 59-67 75-105 14-32 5-71 20-103"
+        fill="none" stroke="#d8cfb2" stroke-linecap="round" stroke-width="9" opacity="0.46"/>
+  <path d="M563 760c-25-64-41-105-24-151 16-43 59-67 75-105 14-32 5-71 20-103"
+        fill="none" stroke="#f0e6ca" stroke-linecap="round" stroke-width="2.5" opacity="0.54"/>
+
+  <g fill="#223b2d" opacity="0.82">
+    <path d="M130 576l12-39 12 39h-8l11 34h-30l11-34z"/>
+    <path d="M177 589l10-32 10 32h-7l9 28h-24l9-28z"/>
+    <path d="M778 545l14-44 14 44h-9l12 37h-34l12-37z"/>
+    <path d="M831 565l11-35 11 35h-7l9 31h-27l9-31z"/>
+  </g>
+
+  <g fill="#f3ead6" opacity="0.6">
+    <path d="M355 210c10-8 19-8 29-2-10 2-18 5-29 2zm36 16c8-7 16-8 25-3-9 2-16 4-25 3z"/>
+  </g>
+
+  <rect width="1000" height="760" fill="url(#vignette)"/>
+  <rect width="1000" height="760" filter="url(#grain)" opacity="0.55"/>
+</svg>
